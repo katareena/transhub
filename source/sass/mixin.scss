@@ -1,0 +1,36 @@
+@mixin input {
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  font-family: "Fira Sans", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: calc(26 / 15);
+  color: $text;
+  border-radius: 4px;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.73;
+  }
+}
+
+@mixin button {
+  display: block;
+  height: 34px;
+  text-align: center;
+  background-color: $blue;
+  border-radius: 6px;
+  border: solid 2px $gray-basic;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    border: solid 2px $white;
+  }
+
+  &:active {
+    background-color: rgba($blue, 0.4);
+  }
+}
