@@ -1,21 +1,30 @@
-# JS Challenge (december 2020)
-* color swap
-* counter
-* countdown
-* tip calculator
-* to do list
-* form validator (mail, password)
-* random quote (don't work for ie11)
-## Quick start guide
-### To get started, you should have installed:
-* Node.js v12.16.1.
-* Gulp v4
-* npm last version
-## Basic commands to work with
-* Install - `npm i`
-* Starting the Local server - `npm start`
-* Building a Project without starting a Local server - `npm run build`
-* Run the Test to the code-guides - `npm test`
+# Сайт компании грузоперевозчика Transhub 24 (февраль 2021)
 
-## All development is going in the `source` directory
-## The final code goes to the `build` directory
+- Стандарты вёрстки: HTML5, CSS3, прогрессивное улучшение.
+- Раскладка блоков на странице делается с помощью флексбоксов.
+- Адаптивность сетки: мобильная, планшетная и десктопная версии. Desktop First. На всех промежуточных разрешениях используется резиновая вёрстка.
+- Используемая методология: БЭМ.
+- Используемые фреймворки: нет.
+- Используемый препроцессор: Sass (SCSS).
+- Используемый инструмент автоматизации: Gulp.
+- Кроссбраузерность: Chrome, Firefox, Safari, Edge, Internet Explorer 11.
+- JavaScript: минимальная реализация.
+
+## Краткая инструкция по работе
+
+### Для начала работы у вас должен быть установлен:
+
+- Node.js v12.16.1.
+- Gulp v4
+- npm last version
+
+## Основные команды для работы
+
+- Установка - `npm i`
+- Запуск локального сервера - `npm start`
+- Сборка проекта без запуска локального сервера - `npm run build`
+- Запуск тестирования на соответствия код-гайдам - `npm test`
+
+## Все разработка ведётся в директории `source`
+
+## Итоговый код попадает в директорию `build`
