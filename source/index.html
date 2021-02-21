@@ -130,54 +130,59 @@
 
   <main class="main">
     <div class="picture"></div>
+
     <section class="cutaway">
       <h2>Компания Transhub 24</h2>
       <p>Наша цель — свести контакты грузоперевозчиков и грузовладельцев в одном месте, сделав их максимально удобными.
       </p>
       <a class="cutaway__link" href="#">Найти перевозчика</a>
     </section>
+
     <section class="topical">
       <h2 class="visually-hidden">Сдайлер</h2>
       <div class="topical__wrap">
+        <!-- <article class="topical__slide topical__slide--left">
+          <h3 class="visually-hidden">Заголовок слайда</h3>
+        </article> -->
 
         <article class="topical__slide authorization">
           <h3>Авторизуйтесь, в личный кабинет грузоотправителя</h3>
-          <div class="authorization__box">
-            <div class="authorization__img-account"></div>
-            <div class="authorization__img-note"></div>
-          </div>
+          <div class="authorization__wrap">
+            <div class="authorization__picture">
+            </div>
 
-          <div class="authorization__inner">
             <form class="authorization__form form" action="https://echo.htmlacademy.ru" method="post">
               <div class="form__item">
-                <label class="form__label" for="user-mail">E-mail</label>
-                <input class="form__input" id="user-mail" type="email" name="email" autocomplete="off"
-                  placeholder="email@example.com">
+                <label for="user-mail">Email или Номер телефона</label>
+                <input id="user-mail" type="email" name="email" autocomplete="off" placeholder="email@example.com">
                 <p id="message-mail"></p>
               </div>
 
               <div class="form__item">
-                <label class="form__label" for="user-password">Password</label>
-                <input class="form__input" id="user-password" type="password" name="password" autocomplete="off"
-                  maxlength="8" minlength="6" placeholder="********">
+                <label for="user-password">Пароль</label>
+                <input id="user-password" type="password" name="password" autocomplete="off" maxlength="8" minlength="6"
+                  placeholder="********">
                 <p id="message-password"></p>
               </div>
 
-              <button class="form__registration" type="submit" aria-label="button submit">Регистрация</button>
-              <button class="form__entry" type="submit" aria-label="button submit">Вход</button>
+              <button class="form__btn form__btn--registration" type="submit"
+                aria-label="button submit">Регистрация</button>
+              <button class="form__btn form__btn--entry" type="submit" aria-label="button submit">Вход</button>
               <a class="form__reminder" href="#" aria-label="button submit">Забыли пароль?</a>
             </form>
-          </div>
 
+          </div>
           <p>Получите удобный инструмент размещения заявок на перевозку грузов и их отслеживания</p>
         </article>
+        <!--
+        <article class="topical__slide topical__slide--right">
+          <h3 class="visually-hidden">Заголовок слайда</h3>
+        </article> -->
 
-        <article class="topical__slide">
-          <h3 class="visually-hidden">Заголовок слайда</h3>
-        </article>
-        <article class="topical__slide">
-          <h3 class="visually-hidden">Заголовок слайда</h3>
-        </article>
+        <div class="topical__arrow topical__arrow--prev"><a href="#" aria-label="Показать предыдущий слайд"></a>
+        </div>
+        <div class="topical__arrow topical__arrow--next"><a href="#" aria-label="Показать следующий слайд"></a>
+        </div>
       </div>
 
       <div class="topical__box">

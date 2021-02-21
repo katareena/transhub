@@ -1,0 +1,82 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.form__item label {
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  margin-bottom: 7px;
+}
+
+.form__item input {
+  width: 310px;
+  height: 50px;
+  background-color: $white;
+  border: 1px solid $decor-2;
+  border-radius: 3px;
+  padding: 15px 20px;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $active;
+  }
+}
+
+.form__item p {
+  margin: 0;
+}
+
+.form__btn {
+  width: 310px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-hover;
+  }
+
+  &:active {
+    background-color: rgba($btn-hover, 0.6);
+  }
+}
+
+.form__btn--registration {
+  background-color: $lite-blue;
+}
+
+.form__btn--entry {
+  background-color: $active;
+}
+
+.form__btn:last-of-type {
+  margin-bottom: 20px;
+}
+
+.form__reminder {
+  text-align: center;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: $btn-hover;
+  }
+
+  &:active {
+    color: rgba($btn-hover, 0.6);
+  }
+}
