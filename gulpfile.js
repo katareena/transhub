@@ -17,7 +17,7 @@ const concat = require("gulp-concat");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 const htmlmin = require("gulp-htmlmin");
-const babel = require('gulp-babel');
+const babel = require("gulp-babel");
 
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV === "development";
 
@@ -32,33 +32,39 @@ task("html", () => {
 });
 
 task("copy:img", () => {
-  return  src("source/img/**/*.{jpg,png,svg,webp}")
+  return src("source/img/**/*.{jpg,png,svg,webp}")
     .pipe(newer("build/img"))
     .pipe(dest("build/img"))
     .pipe(server.stream());
 });
 
 task("copy:ico", () => {
-  return  src("source/img/**/*.ico")
+  return src("source/img/**/*.ico")
     .pipe(newer("build"))
     .pipe(dest("build"))
     .pipe(server.stream());
 });
 
 task("copy:fonts", () => {
-  return  src("source/fonts/*.{woff,woff2}")
+  return src("source/fonts/*.{woff,woff2}")
     .pipe(newer("build/fonts"))
     .pipe(dest("build/fonts"));
+});
+
+task("copy:pg", () => {
+  return src("source/pixel-glass/*.*")
+    .pipe(newer("build/pixel-glass"))
+    .pipe(dest("build/pixel-glass"));
 });
 
 //-------------- собираем css (без сорсмап, без минификации) ----------------------
 task("csscopy", () => {
   return src("source/sass/style.scss")
-  .pipe(plumber())
-  .pipe(sass())
-  .pipe(postcss([autoprefixer()]))
-  .pipe(dest("build/css"));
-})
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(postcss([autoprefixer()]))
+    .pipe(dest("build/css"));
+});
 
 //-------------- собираем css ----------------------
 task("css", () => {
@@ -88,13 +94,13 @@ task("jsvendors", () => {
 });
 
 task("jsmain", () => {
-  return src([
-    "source/js/main/*.js",
-  ])
+  return src(["source/js/main/*.js"])
     .pipe(gulpIf(isDev, sourcemap.init()))
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
+    .pipe(
+      babel({
+        presets: ["@babel/env"],
+      })
+    )
     .pipe(concat("main.min.js"))
     .pipe(gulpIf(isDev, sourcemap.write(".")))
     .pipe(gulpIf(!isDev, uglify()))
@@ -108,7 +114,7 @@ task("server", () => {
     notify: false,
     open: true,
     cors: true,
-    ui: false
+    ui: false,
   });
 });
 
@@ -126,7 +132,20 @@ task("watch", () => {
   watch("source/fonts/*.{woff,woff2}", series("copy:fonts"));
 });
 
-const buildTasks = ["clean", parallel(["html","csscopy", "css", "jsvendors", "jsmain", "copy:fonts", "copy:img", "copy:ico"])];
+const buildTasks = [
+  "clean",
+  parallel([
+    "html",
+    "csscopy",
+    "css",
+    "jsvendors",
+    "jsmain",
+    "copy:fonts",
+    "copy:img",
+    "copy:ico",
+    "copy:pg",
+  ]),
+];
 
 task("build", series(buildTasks));
 task("development", series("build", parallel("server", "watch")));

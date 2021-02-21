@@ -21,75 +21,115 @@
     as="font">
   <link href="css/style.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico" />
+
+  <!-- pixel-glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-image: url("img/main.jpg");
+    }
+  </style>
+  <link href="pixel-glass/styles.css" rel="stylesheet">
+  <script src="pixel-glass/script.js"></script>
+  <!-- ----------- -->
 </head>
 
 <body>
   <header class="header">
-    <h1 class="visually-hidden">Грузоперевозки Transhub 24</h1>
-    <div class="header__inner">
-      <article class="language">
-        <button class="language__btn">en</button>
-        <span>/</span>
-        <button class="language__btn language__btn--active">ru</button>
-      </article>
-      <ul class="info">
-        <li class="info__item">
-          <a class="info__link" href="#">+7 (87922) 2-63-10</a>
-        </li>
-        <li class="info__item">
-          <a class="info__link" href="#">О компании</a>
-        </li>
-        <li class="info__item">
-          <a class="info__link" href="#">Рекламодателям</a>
-        </li>
-        <li class="info__item">
-          <a class="info__link" href="#">База знаний</a>
-        </li>
-        <li class="info__item">
-          <a class="info__link" href="#">Контакты</a>
-        </li>
-      </ul>
-      <ul class="user-nav">
-        <li class="user-nav__item">
-          <a class="user-nav__link" href="#">Вход</a>
-        </li>
-        <li class="user-nav__item">
-          <a class="user-nav__link" href="#">Регистрация</a>
-        </li>
-      </ul>
-    </div>
+    <div class="header__wrap">
 
-    <div class="header__inner">
-      <a class="header__logo"><img src="img/index-logo.svg" width="104" height="40" alt="Логотип TransHub 24"></a>
-
-      <nav class="site-nav">
-        <ul class="site-nav__list">
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Найти перевозчика</a>
+      <h1 class="visually-hidden">Грузоперевозки Transhub 24</h1>
+      <div class="header__inner">
+        <article class="language">
+          <h2 class="visually-hidden">Выберите язык интерфейса</h2>
+          <button class="language__btn">en</button>
+          <span>/</span>
+          <button class="language__btn language__btn--active">ru</button>
+        </article>
+        <ul class="info info--decor-line">
+          <li class="info__item">
+            <a class="info__link" href="#">+7 (87922) 2-63-10</a>
           </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Поиск груза</a>
+          <li class="info__item">
+            <a class="info__link" href="#">О компании</a>
           </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Перевозчики</a>
+          <li class="info__item">
+            <a class="info__link" href="#">Рекламодателям</a>
           </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Грузоотправители</a>
+          <li class="info__item">
+            <a class="info__link" href="#">База знаний</a>
           </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Покупка и оренда техники</a>
+          <li class="info__item">
+            <a class="info__link" href="#">Контакты</a>
           </li>
         </ul>
-        <article class="order">
-          <a class="order__link" href="#">Разместить заказ</a>
-        </article>
-      </nav>
-    </div>
+        <ul class="user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">Вход</a>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">Регистрация</a>
+          </li>
+        </ul>
+      </div>
 
+      <div class="header__inner">
+        <a class="header__logo"><img src="img/logo.svg" width="104" height="40" alt="Логотип TransHub 24"></a>
+
+        <nav class="site-nav">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--transporter" href="#">Найти перевозчика</a>
+
+              <ul class="site-nav__transporter-list">
+                <li class="site-nav__transporter-item">
+                  <a href="#">пример текста</a>
+                </li>
+                <li class="site-nav__transporter-item">
+                  <a href="#">пример текста</a>
+                </li>
+                <li class="site-nav__transporter-item">
+                  <a href="#">пример текста</a>
+                </li>
+              </ul>
+
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Поиск груза</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Перевозчики</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Грузоотправители</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--technic" href="#">Покупка и аренда техники</a>
+
+              <ul class="site-nav__technic-list">
+                <li class="site-nav__technic-item">
+                  <a href="#">пример текста</a>
+                </li>
+                <li class="site-nav__technic-item">
+                  <a href="#">пример текста</a>
+                </li>
+                <li class="site-nav__technic-item">
+                  <a href="#">пример текста</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="order">
+            <a class="order__link" href="#">Разместить груз</a>
+          </div>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <main class="main">
-    <section class="picture"></section>
+    <div class="picture"></div>
     <section class="cutaway">
       <h2>Компания Transhub 24</h2>
       <p>Наша цель — свести контакты грузоперевозчиков и грузовладельцев в одном месте, сделав их максимально удобными.
@@ -97,6 +137,7 @@
       <a class="cutaway__link" href="#">Найти перевозчика</a>
     </section>
     <section class="topical">
+      <h2 class="visually-hidden">Сдайлер</h2>
       <div class="topical__wrap">
 
         <article class="topical__slide authorization">
@@ -107,7 +148,7 @@
           </div>
 
           <div class="authorization__inner">
-            <form action="authorization__form form" action="https://echo.htmlacademy.ru" method="post">
+            <form class="authorization__form form" action="https://echo.htmlacademy.ru" method="post">
               <div class="form__item">
                 <label class="form__label" for="user-mail">E-mail</label>
                 <input class="form__input" id="user-mail" type="email" name="email" autocomplete="off"
@@ -124,15 +165,19 @@
 
               <button class="form__registration" type="submit" aria-label="button submit">Регистрация</button>
               <button class="form__entry" type="submit" aria-label="button submit">Вход</button>
-              <a class="form__reminder" type="button" aria-label="button submit">Забыли пароль?</a>
+              <a class="form__reminder" href="#" aria-label="button submit">Забыли пароль?</a>
             </form>
           </div>
 
           <p>Получите удобный инструмент размещения заявок на перевозку грузов и их отслеживания</p>
         </article>
 
-        <article class="topical__slide"></article>
-        <article class="topical__slide"></article>
+        <article class="topical__slide">
+          <h3 class="visually-hidden">Заголовок слайда</h3>
+        </article>
+        <article class="topical__slide">
+          <h3 class="visually-hidden">Заголовок слайда</h3>
+        </article>
       </div>
 
       <div class="topical__box">

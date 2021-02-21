@@ -10,17 +10,19 @@ html {
 
 body {
   font-family: "Montserrat", "Tahoma", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
-  line-height: calc(28 / 16);
-  // color: $text;
-  // background-color: $body-background-1;
+  line-height: calc(19 / 16);
+  letter-spacing: 0.1px;
+  color: $text-main;
+  background-color: $background-basic;
   width: 100%;
   min-height: 100%;
   margin: 0;
+  overflow-x: hidden;
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    line-height: 2;
+    line-height: 1.23;
   }
 }
 
@@ -44,4 +46,5 @@ img {
 a {
   text-decoration: none;
   color: $black;
+  white-space: nowrap;
 }

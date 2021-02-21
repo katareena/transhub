@@ -1,0 +1,96 @@
+.site-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.site-nav__list {
+  @include list-reset;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.site-nav__item {
+  margin-right: 20px;
+  position: relative;
+}
+
+.site-nav__link {
+  color: $white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px;
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus {
+  color: $active;
+}
+
+.site-nav__link:active {
+  opacity: 0.6;
+}
+
+.site-nav__link--transporter,
+.site-nav__link--technic {
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border-left: solid 1px $white;
+    border-bottom: solid 1px $white;
+    left: calc(50% - 4px);
+    top: 63%;
+    transform: rotate(-45deg);
+  }
+}
+
+// ------------------------
+
+.site-nav__transporter-list,
+.site-nav__technic-list {
+  display: none;
+
+  @include list-reset;
+  width: 150px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 75px);
+}
+
+.site-nav__transporter-item,
+.site-nav__technic-item {
+  padding: 10px;
+}
+
+.site-nav__transporter-item a,
+.site-nav__technic-item a {
+  color: $white;
+}
+
+.site-nav__transporter-item a:hover,
+.site-nav__transporter-item a:focus,
+.site-nav__technic-item a:hover,
+.site-nav__technic-item a:focus {
+  color: $active;
+}
+
+.site-nav__item:hover .site-nav__transporter-list,
+.site-nav__item:focus .site-nav__transporter-list,
+.site-nav__item:active .site-nav__transporter-list,
+.site-nav__item:hover .site-nav__technic-list,
+.site-nav__item:focus .site-nav__technic-list,
+.site-nav__item:active .site-nav__technic-list {
+  display: block;
+}

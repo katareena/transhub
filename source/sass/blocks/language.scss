@@ -1,0 +1,34 @@
+.language {
+  @include font-header-1;
+  margin-top: 1px;
+  margin-left: -9px;
+  margin-right: 80px;
+
+  display: flex;
+  align-items: center;
+}
+
+.language__btn {
+  background-color: transparent;
+  border: transparent;
+  text-transform: uppercase;
+  color: rgba($white, 0.5);
+  cursor: pointer;
+}
+
+.language__btn:first-of-type {
+  margin-right: 3px;
+}
+
+.language__btn--active {
+  color: $active;
+}
+
+.language__btn:hover,
+.language__btn:focus {
+  color: $white;
+}
+
+.language__btn:active {
+  color: $active;
+}

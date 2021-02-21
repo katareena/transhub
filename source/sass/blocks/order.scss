@@ -1,0 +1,22 @@
+.order {
+  display: flex;
+  align-items: center;
+}
+
+.order__link {
+  color: $active;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+
+.order__link:hover,
+.order__link:focus {
+  color: $white;
+}
+
+.order__link:active {
+  opacity: 0.5;
+}

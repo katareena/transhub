@@ -1,0 +1,31 @@
+.user-nav {
+  @include list-reset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-left: 52px;
+  margin-right: -10px;
+}
+
+.user-nav__item {
+  padding-bottom: 3px;
+}
+
+.user-nav__item:not(:last-child) {
+  border-right: solid 1px rgba($white, 0.5);
+}
+
+.user-nav__link {
+  @include font-header-1;
+  padding: 5px 10px;
+}
+
+.user-nav__link:hover,
+.user-nav__link:focus {
+  color: $white;
+}
+
+.user-nav__link:active {
+  color: $active;
+}

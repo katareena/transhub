@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  background-color: #12033c;
+  z-index: 10;
+}
+
+.header__wrap {
+  width: 100%;
+  min-width: 1024px;
+  max-width: 1280px;
+  min-height: 50px;
+  margin: 0 auto;
+}
+
+.header_fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.header__inner {
+  @include padding-site;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__inner:first-of-type {
+  position: relative;
+}
+
+.header__logo {
+  width: 120px;
+  height: 45px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-right: 30px;
+}
