@@ -19,7 +19,11 @@
     as="font">
   <link rel="preload" crossorigin="anonymous" href="fonts/montserrat-v14-latin_cyrillic-700.woff" type="font/woff"
     as="font">
-  <link href="css/style.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="shortcut icon" href="favicon.ico" />
 
   <!-- pixel-glass -->
@@ -138,65 +142,48 @@
       <a class="cutaway__link" href="#">Найти перевозчика</a>
     </section>
 
-    <section class="topical">
-      <h2 class="visually-hidden">Сдайлер</h2>
-      <div class="topical__wrap">
-        <!-- <article class="topical__slide topical__slide--left">
-          <h3 class="visually-hidden">Заголовок слайда</h3>
-        </article> -->
 
-        <article class="topical__slide authorization">
-          <h3>Авторизуйтесь, в личный кабинет грузоотправителя</h3>
-          <div class="authorization__wrap">
-            <div class="authorization__picture">
+    <div class="owl-carousel owl-theme">
+      <div class="authorization">
+        <h3>Авторизуйтесь, в личный кабинет грузоотправителя</h3>
+        <div class="authorization__wrap">
+          <div class="authorization__picture">
+          </div>
+
+          <form class="authorization__form form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form__item">
+              <label for="user-mail">Email или Номер телефона</label>
+              <input id="user-mail" type="email" name="email" autocomplete="off" placeholder="email@example.com">
+              <p id="message-mail"></p>
             </div>
 
-            <form class="authorization__form form" action="https://echo.htmlacademy.ru" method="post">
-              <div class="form__item">
-                <label for="user-mail">Email или Номер телефона</label>
-                <input id="user-mail" type="email" name="email" autocomplete="off" placeholder="email@example.com">
-                <p id="message-mail"></p>
-              </div>
+            <div class="form__item">
+              <label for="user-password">Пароль</label>
+              <input id="user-password" type="password" name="password" autocomplete="off" maxlength="8" minlength="6"
+                placeholder="********">
+              <p id="message-password"></p>
+            </div>
 
-              <div class="form__item">
-                <label for="user-password">Пароль</label>
-                <input id="user-password" type="password" name="password" autocomplete="off" maxlength="8" minlength="6"
-                  placeholder="********">
-                <p id="message-password"></p>
-              </div>
+            <button class="form__btn form__btn--registration" type="submit"
+              aria-label="button submit">Регистрация</button>
+            <button class="form__btn form__btn--entry" type="submit" aria-label="button submit">Вход</button>
+            <a class="form__reminder" href="#" aria-label="button submit">Забыли пароль?</a>
+          </form>
 
-              <button class="form__btn form__btn--registration" type="submit"
-                aria-label="button submit">Регистрация</button>
-              <button class="form__btn form__btn--entry" type="submit" aria-label="button submit">Вход</button>
-              <a class="form__reminder" href="#" aria-label="button submit">Забыли пароль?</a>
-            </form>
-
-          </div>
-          <p>Получите удобный инструмент размещения заявок на перевозку грузов и их отслеживания</p>
-        </article>
-        <!--
-        <article class="topical__slide topical__slide--right">
-          <h3 class="visually-hidden">Заголовок слайда</h3>
-        </article> -->
-
-        <div class="topical__arrow topical__arrow--prev"><a href="#" aria-label="Показать предыдущий слайд"></a>
         </div>
-        <div class="topical__arrow topical__arrow--next"><a href="#" aria-label="Показать следующий слайд"></a>
-        </div>
+        <p>Получите удобный инструмент размещения заявок на перевозку грузов и их отслеживания</p>
       </div>
-
-      <div class="topical__box">
-        <div class="topical__point"></div>
-        <div class="topical__point"></div>
-        <div class="topical__point"></div>
+      <div>
+        <h3 class="visually-hidden">Заголовок слайда</h3>
       </div>
-    </section>
-
+      <div>
+        <h3 class="visually-hidden">Заголовок слайда</h3>
+      </div>
+    </div>
   </main>
 
   <script src="js/vendor.min.js" defer></script>
   <script src="js/main.min.js" defer></script>
-
 </body>
 
 </html>

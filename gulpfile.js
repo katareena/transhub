@@ -57,6 +57,10 @@ task("copy:pg", () => {
     .pipe(dest("build/pixel-glass"));
 });
 
+task("copy:carousel", () => {
+  return src("source/css/*.*").pipe(newer("build/css")).pipe(dest("build/css"));
+});
+
 //-------------- собираем css (без сорсмап, без минификации) ----------------------
 task("csscopy", () => {
   return src("source/sass/style.scss")
@@ -83,6 +87,8 @@ task("css", () => {
 //-------------- собираем js ----------------------
 task("jsvendors", () => {
   return src([
+    "source/js/vendors/jquery.js",
+    "source/js/vendors/owl.carousel.min.js",
     "./node_modules/picturefill/dist/picturefill.js",
     "source/js/vendors/*.js",
   ])
@@ -144,6 +150,7 @@ const buildTasks = [
     "copy:img",
     "copy:ico",
     "copy:pg",
+    "copy:carousel",
   ]),
 ];
 

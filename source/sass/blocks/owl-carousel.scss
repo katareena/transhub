@@ -1,0 +1,54 @@
+.owl-carousel {
+  margin-bottom: 50px;
+}
+
+.owl-item {
+  height: 747px;
+  padding: 82px 252px;
+  background-color: $white;
+  border-radius: 40px;
+  position: relative;
+}
+
+.owl-prev span,
+.owl-next span {
+  display: none;
+}
+
+.owl-prev::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-left: solid 2px rgba($decor-4, 0.3);
+  border-bottom: solid 2px rgba($decor-4, 0.3);
+  left: 180px;
+  top: calc(50% - 60px);
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.owl-prev:hover:before,
+.owl-next:hover::before,
+.owl-prev:focus:before,
+.owl-next:focus::before {
+  border-left: solid 2px $decor-4;
+  border-bottom: solid 2px $decor-4;
+}
+
+.owl-next::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-left: solid 2px rgba($decor-4, 0.3);
+  border-bottom: solid 2px rgba($decor-4, 0.3);
+  right: 180px;
+  top: calc(50% - 60px);
+  transform: rotate(-135deg);
+  cursor: pointer;
+}

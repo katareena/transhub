@@ -49,7 +49,7 @@
     "*.json",
     "*.js",
     "source/*.html",
-    "source/js/**/*.js",
+    "source/js/main/*.js",
     "source/sass/**/*.scss"
   ],
   "engines": {
@@ -58,5 +58,8 @@
   "dependencies": {
     "normalize-scss": "^7.0.1",
     "picturefill": "^3.0.3"
-  }
+  },
+  "eslintIgnore": [
+    "source/js/vendors/*.js"
+  ]
 }
